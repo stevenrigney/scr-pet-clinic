@@ -2,9 +2,6 @@ package guru.springframework.scrpetclinic.services;
 
 import java.util.Set;
 
-public interface Vet {
+public interface Vet extends CrudService<Vet, Long>{
 
-	Vet findById(Long id);
-	Vet save(Vet vet);
-	Set<Vet> findAll();
 }
