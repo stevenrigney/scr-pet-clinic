@@ -6,9 +6,10 @@ import org.springframework.stereotype.Service;
 
 import guru.springframework.scrpetclinic.model.Pet;
 import guru.springframework.scrpetclinic.services.CrudService;
+import guru.springframework.scrpetclinic.services.PetService;
 
 @Service
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
 	@Override
 	public Pet save(Pet object) {
