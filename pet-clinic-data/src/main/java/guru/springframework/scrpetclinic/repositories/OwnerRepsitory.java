@@ -6,4 +6,6 @@ import guru.springframework.scrpetclinic.model.Owner;
 
 public interface OwnerRepsitory extends CrudRepository<Owner, Long>{
 
+	Owner findByLastName(String lastName);
+
 }
