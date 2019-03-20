@@ -8,7 +8,7 @@ import guru.springframework.scrpetclinic.model.Specialty;
 import guru.springframework.scrpetclinic.services.SpecialtyService;
 
 @Service
-public class SpecialtyServiceMap extends AbstractMapService<Specialty, Long> implements SpecialtyService {
+public class SpecialtyMapService extends AbstractMapService<Specialty, Long> implements SpecialtyService {
 
 	@Override
 	public Set<Specialty> findAll() {

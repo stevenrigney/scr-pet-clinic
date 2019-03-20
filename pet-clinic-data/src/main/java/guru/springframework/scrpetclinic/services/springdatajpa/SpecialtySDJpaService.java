@@ -3,10 +3,15 @@ package guru.springframework.scrpetclinic.services.springdatajpa;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
+
 import guru.springframework.scrpetclinic.model.Specialty;
 import guru.springframework.scrpetclinic.repositories.SpecialtyRepository;
 import guru.springframework.scrpetclinic.services.SpecialtyService;
 
+@Service
+@Profile("springdatajpa")
 public class SpecialtySDJpaService implements SpecialtyService {
 
 	private final SpecialtyRepository specialtyRepsitory;
