@@ -10,13 +10,6 @@ import guru.springframework.scrpetclinic.services.VisitService;
 @Service
 public class VisitMapService extends AbstractMapService<Visit, Long> implements VisitService {
 
-	private final VisitService visitService;
-	
-	public VisitMapService(VisitService visitService) {
-		super();
-		this.visitService = visitService;
-	}
-	
 	@Override
 	public Set<Visit> findAll() {
 		return super.findAll();
@@ -35,7 +28,7 @@ public class VisitMapService extends AbstractMapService<Visit, Long> implements 
 				|| visit.getPet().getOwner().getId() == null ) {
 			throw new RuntimeException("Invalid visit");
 		}
-
+		
 		return super.save(visit);
 	}
 
