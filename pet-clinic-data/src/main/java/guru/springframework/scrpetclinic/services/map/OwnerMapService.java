@@ -2,6 +2,7 @@ package guru.springframework.scrpetclinic.services.map;
 
 import java.util.Set;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import guru.springframework.scrpetclinic.model.Owner;
@@ -11,6 +12,7 @@ import guru.springframework.scrpetclinic.services.PetService;
 import guru.springframework.scrpetclinic.services.PetTypeService;
 
 @Service
+@Profile({"default", "map"})
 public class OwnerMapService extends AbstractMapService<Owner, Long>  implements OwnerService{
 
 	private final PetTypeService petTypeService;
